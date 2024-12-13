@@ -24,21 +24,21 @@
   </body>
   <script>
     // Mouseover event to change border color, Remove ____ and add event
-    document.getElementById("image").____ = function () {
+    document.getElementById("image").onmouseover = function () {
       this.style.borderColor = "red";
       document.getElementById("hoverMsg").textContent =
         "You are hovering over the image!";
     };
 
     // Mouseout event to revert the border color, Remove ____ and add event
-    document.getElementById("image").____ = function () {
+    document.getElementById("image").onmouseout = function () {
       this.style.borderColor = "black";
       document.getElementById("hoverMsg").textContent =
         "Hover over the image to see the effect";
     };
 
     // Input event to update paragraph with input field value, Remove ____ and add event
-    document.getElementById("textInput").____ = function () {
+    document.getElementById("textInput").oninput = function () {
       document.getElementById("inputDisplay").textContent =
         "You typed: " + this.value;
     };

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Event Handling</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #inputField {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: darkgreen;
+      }
+      p {
+        font-size: 18px;
+        color: black;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Form Example</h1>
+
+    <!-- Input Field -->
+    <input id="inputField" type="text" placeholder="Type something here..." />
+
+    <!-- Button to Clear Input -->
+    <button id="clearButton">Clear Input</button>
+
+    <!-- Paragraph to Display Input -->
+    <p id="displayParagraph">Your input will appear here...</p>
+
+    <script>
+      // Real-time input event to update the paragraph
+      document.getElementById("inputField").addEventListener("input", function () {
+        const paragraph = document.getElementById("displayParagraph");
+        paragraph.textContent = this.value;
+      });
+
+      // Click event to clear input and update the paragraph
+      document.getElementById("clearButton").addEventListener("click", function () {
+        const inputField = document.getElementById("inputField");
+        const paragraph = document.getElementById("displayParagraph");
+
+        inputField.value = ""; // Clear the input field
+        paragraph.textContent = "Input cleared!";
+      });
+
+      // Change event to alert the current input value when field loses focus
+      document.getElementById("inputField").addEventListener("change", function () {
+        alert("Current input value: " + this.value);
+      });
+
+      // Double-click event to change the text color of the paragraph to red
+      document
+        .getElementById("displayParagraph")
+        .addEventListener("dblclick", function () {
+          this.style.color = "red";
+        });
+    </script>
+  </body>
+</html>

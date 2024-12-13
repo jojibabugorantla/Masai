@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background and overall page styles */
+body {
+  background-color: #d3d3d3;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Blog Header */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: darkblue;
+  font-size: 36px;
+}
+
+p.introduction {
+  font-size: 18px;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Blog Post Section */
+.blog-container {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p.post-content {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Image Styling */
+img.blog-image {
+  display: block;
+  margin: 10px auto;
+  width: 300px;
+  border: 2px solid #333;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  background-color: #f0f0f0;
+  border-top: 2px solid #333;
+}
+
+nav a {
+  background-color: lightblue;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #87ceeb;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}

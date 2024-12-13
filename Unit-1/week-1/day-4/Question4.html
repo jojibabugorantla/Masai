@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Events Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkgreen;
+    }
+    #image {
+      width: 300px;
+      height: 200px;
+      border: 5px solid black;
+      display: block;
+      margin: 20px auto;
+    }
+    #hoverMessage {
+      text-align: center;
+      font-size: 18px;
+      color: blue;
+    }
+    #welcomeMessage {
+      font-size: 18px;
+      color: darkblue;
+      margin-top: 20px;
+      text-align: center;
+    }
+    #inputField {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interactive Events Page</h1>
+  <button id="welcomeButton">Enter Your Name</button>
+  <img id="image" src="https://via.placeholder.com/300x200" alt="Sample Image">
+  <p id="hoverMessage"></p>
+  <input id="inputField" type="text" placeholder="Type something...">
+  <p id="welcomeMessage">Click the button to start!</p>
+
+  <script>
+    // Click event: Prompt for the user's name and display a welcome message
+    document.getElementById("welcomeButton").addEventListener("click", function () {
+      const name = prompt("Please enter your name:");
+      if (name) {
+        document.getElementById("welcomeMessage").textContent = `Welcome, ${name}!`;
+      }
+    });
+
+    // Mouseover event: Change border color and show a message
+    document.getElementById("image").addEventListener("mouseover", function () {
+      this.style.borderColor = "blue";
+      document.getElementById("hoverMessage").textContent = "You are hovering over the image!";
+    });
+
+    // Mouseout event: Reset border color and hide the message
+    document.getElementById("image").addEventListener("mouseout", function () {
+      this.style.borderColor = "black";
+      document.getElementById("hoverMessage").textContent = "";
+    });
+
+    // Keydown event: Log the key pressed in the console
+    document.getElementById("inputField").addEventListener("keydown", function (event) {
+      console.log(`Key pressed: ${event.key}`);
+    });
+
+    // Double-click event: Change the paragraph text to "Have a nice day!"
+    document.getElementById("welcomeMessage").addEventListener("dblclick", function () {
+      this.textContent = "Have a nice day!";
+    });
+
+    // Context menu event: Disable right-click on the image
+    document.getElementById("image").addEventListener("contextmenu", function (event) {
+      event.preventDefault(); // Prevent the context menu from opening
+      alert("Right-click disabled on this image");
+    });
+  </script>
+</body>
+</html>

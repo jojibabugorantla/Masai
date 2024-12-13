@@ -34,20 +34,20 @@
   </body>
   <script>
     // Click event to show an alert, Remove ____ and add event
-    document.getElementById("clickBtn").____ = function () {
+    document.getElementById("clickBtn").onclick = function () {
       alert("Button clicked!");
     };
 
     // Remove ____ and add event
     // Click event to prompt user for their name and display it in the paragraph
-    document.getElementById("addNameBtn").____ = function () {
+    document.getElementById("addNameBtn").onclick = function () {
       let name = prompt("Please enter your name:");
       document.getElementById("message").textContent = "Hello, " + name;
     };
 
     // Add this if you create an input field in the HTML
     // Change event on input field (this is optional, if input field is added)
-    document.getElementById("inputField").____ = function () {
+    document.getElementById("inputField").onchange = function () {
       alert("Input field value changed!");
     };
   </script>

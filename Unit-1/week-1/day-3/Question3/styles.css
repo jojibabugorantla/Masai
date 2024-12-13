@@ -1,0 +1,110 @@
+   /* General Reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Center the certificate */
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    background: #eaeaea;
+    padding: 20px;
+  }
+
+  /* Main container */
+  .certificate-container {
+    background: white;
+    width: 700px;
+    height: auto;
+    border: 8px solid #4a90e2;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Main Heading */
+  h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #333;
+  }
+
+  /* Sub Heading Text */
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+  }
+
+  /* Space for the name */
+  .student-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  /* Course name styling */
+  .course-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+  }
+
+  /* Date styling */
+  .completion-date {
+    font-size: 14px;
+    color: #555;
+    margin: 20px 0;
+  }
+
+  /* Table styling */
+  .grades-table {
+    margin: 30px auto 0;
+    width: 70%;
+    border: 1px solid #333;
+    border-collapse: collapse;
+  }
+
+  .grades-table th,
+  .grades-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .grades-table th {
+    background-color: #4a90e2;
+    color: white;
+  }
+
+  /* Signature Area */
+  .signature-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 0 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .signature-section .left-signature {
+    text-align: left;
+  }
+
+  .signature-section .right-date {
+    text-align: right;
+  }
+
+  hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #333;
+  }

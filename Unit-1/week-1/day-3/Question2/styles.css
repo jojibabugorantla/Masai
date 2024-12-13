@@ -14,3 +14,11 @@
 .self-intro h1 {
     color: darkgreen;
 }
+.form input{
+    border: 2px solid grey;
+}
+.form button {
+    background-color: green;
+    color: white;
+    margin: 15px;
+}
